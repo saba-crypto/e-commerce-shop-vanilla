@@ -5,7 +5,7 @@ body {
 p {
     margin: 0;
 }
-.whole-content {
+.main-content {
     display: flex;
     flex-direction: row;
 }
@@ -23,11 +23,16 @@ p {
     color: black;
     height: 70px;
     z-index: 100;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+    border-bottom: solid 2px rgb(137, 137, 137);
 }
 .header .left-side {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.header .middle-side {
+    justify-self: center;
 }
 .header .right-side {
     display: flex;
@@ -55,13 +60,15 @@ p {
     font-size: 0.1px;
 }
 .page-title {
+    font-size: 2rem;
     margin: 0px 20px;
     color: var(--optional-clr);
     white-space: nowrap;
 }
 .track-orders-button {
     padding: 15.5px 30px;
-    border-radius: 5px;
+    height: 50px;
+    border-radius: 10px;
     background-color: transparent;
     color: white;
     font-size: 15px;
@@ -80,25 +87,70 @@ p {
 .track-orders-button:active {
     opacity: 0.8;
 }
-.log-in-button{
-    padding: 16px 34px;
-    white-space: nowrap;
-    background-color: transparent;
-    border: var(--accent-clr) 1.7px solid;
-    color: var(--accent-clr);
-    border-radius: 5px;
-    font-weight: 600;
-    transition: 0.15s;
-    box-sizing: border-box;
+.log-in-button::after {
+    content: "";
+    vertical-align: middle;
+    background-image: url(/Images/Icons/log-in.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    transform: translateX(35px);
+    transition-duration: 0.3s;
 }
-.log-in-button:hover {
-    background-color: var(--accent-clr);
-    filter: saturate(120%);
-    color: var(--secondary-clr);
+.log-in-button:hover::after {
+    position: static;
+    display: inline-block;
+    transform: translateX(0px);
+    width: 30%;
+    height: 24px;
+    opacity: 1;
+    margin-left: 8px;
+}
+.log-in-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100px;
+    width: 100%;
+    height: 50px;
+    white-space: nowrap;
+    color: var(--optional-clr);
+    border-radius: 10px;
+    background: transparent;
+    border: var(--accent-clr) 2px solid;
+    font-weight: 600;
     cursor: pointer;
+    box-sizing: border-box;
+    z-index: 1;
+    transition-duration: 0.15s;
+}
+
+
+.log-in-button::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    background: var(--accent-clr);
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    z-index: -1;
+}
+.log-in-button:hover::before {
+    content: "";
+    opacity: 1;
+    left: 0;
+    right: 0;
 }
 .log-in-button:active {
-    scale: 0.96;
+    opacity: 0.7;
 }
 .profile-photo {
     object-fit: cover;
@@ -194,11 +246,11 @@ p {
     transition-duration: 0.15s;
 }
 .update-button {
-    background-color: var(--accent-clr);
+    background-color: var(--optional-clr);
     border: none;
     padding: 12px 30px;
     border-radius: 12px;
-    color: var(--optional-clr);
+    color: var(--secondary-clr);
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
@@ -324,7 +376,10 @@ p {
     justify-content: center;
 }
 .pay-button {
-    background-color: var(--accent-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(128, 0, 255), var(--accent-clr));
     color: var(--optional-clr);
     border: none;
     width: 320px;
@@ -333,10 +388,31 @@ p {
     font-weight: 700;
     font-size: 30px;
     cursor: pointer;
-    transition: opacity 0.15s;
+    transition: all 0.15s ease-in-out;
+}
+.pay-button::after {
+    content: "";
+    position: static;
+    display: inline-block;
+    background-image: url(/Images/Icons/wallet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateY(60px);
+    transition-duration: 0.2s;
+}
+.pay-button:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
 }
 .pay-button:hover {
     opacity: 0.8;
+    box-shadow: 0px 0px 20px rgba(128, 0, 255, 0.8);
 }
 .pay-button:active {
     transition-duration: 0.01s;

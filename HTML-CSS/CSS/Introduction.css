@@ -40,7 +40,7 @@
 .additional-text-div {
     border: none;
     background-color: var(--primary-clr);
-    padding: 20px;
+    padding: min(25px, 3vw);
     border-radius: 10px;
     max-width: 700px;
     min-width: 100px;

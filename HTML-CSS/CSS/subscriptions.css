@@ -15,7 +15,7 @@
     background-color: var(--optional-clr);
     display: inline-block;
     color: black;
-    border-radius: 9px;
+    border-radius: 10px;
     transition-duration: 0.2s;
     width: 85%;
     margin-top: 50px;

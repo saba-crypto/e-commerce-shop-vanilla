@@ -132,7 +132,7 @@
     content: "";
     width: 0;
     height: 0;
-    opacity: 1;
+    opacity: 0;
     z-index: -1;
     background-image: url(/Images/Icons/add_shopping_cart_27dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png);
     transform: translateX(10px);

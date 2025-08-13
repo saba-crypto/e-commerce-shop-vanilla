@@ -14,8 +14,11 @@ body {
     color: var(--primary-clr);
     margin: 0;
 }
+.white-line {
+    width: 70%;
+}
 
-.whole-content {
+.main-content {
     font-family: Roboto, Arial;
     position: relative;
 }
