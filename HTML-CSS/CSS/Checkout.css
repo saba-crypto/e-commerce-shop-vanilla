@@ -157,6 +157,42 @@ p {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+    cursor: pointer;
+}
+.profile-photo-div {
+    position: relative;
+}
+.profile-photo-div .tooltip {
+    position: absolute;
+    color: var(--optional-clr);
+    background-color: rgb(0, 0, 0);
+    bottom: -170px;
+    right: -23px;
+    text-wrap: nowrap;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    opacity: 0;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    transform: translateX(500px);
+    transition: all ease-out 0.2s;
+}
+.profile-photo-div:hover .tooltip {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.first-name,
+.last-name,
+.number,
+.address {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+.identity-icon {
+    width: 20px;
+    margin-right: 10px;
 }
 
 
