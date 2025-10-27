@@ -1,7 +1,8 @@
-import {renderPopularGamesGrid} from './mainPage/renderPopularGames.js'
-import {renderGamesGrid} from './mainPage/renderGames.js'
-import {renderHeader} from './mainPage/renderHeader.js'
+import {renderPopularGamesGrid} from './mainPage/popularGames.js'
+import {renderGamesGrid} from './mainPage/games.js'
+import {renderHeader} from './mainPage/pageHeader.js'
 renderHeader()
 renderPopularGamesGrid()
 renderGamesGrid()
+
 

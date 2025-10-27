@@ -1,4 +1,8 @@
 import { products } from "../../data/products.js";
+import { formatCurrency } from "../utils/money.js";
+import {cart} from '../../data/cart.js'
+import { renderHeader } from "./pageHeader.js";
+import { renderPopularGamesGrid } from "./popularGames.js";
 let initialLimit = 10
 
 export function renderGamesGrid() {
@@ -7,7 +11,7 @@ export function renderGamesGrid() {
   products.forEach((product) => {
     if (product.type !== 'popular' && gamesLimit > 0) {
       html += `
-        <div class="game-card2 game-card-animation">
+        <div class="game-card2">
           <div class="game-image-div">
             <img
               class="game-image"
@@ -21,7 +25,7 @@ export function renderGamesGrid() {
             </div>
             <div class="game-info-flex">
               <div class="game-info">
-                <button class="add-to-cart-button">Add to cart</button>
+                <button data-product-id="${product.id}" class="add-to-cart-button js-add-to-cart">Add to cart</button>
                 <button class="examine-button">Inspect</button>
               </div>
               <div class="game-name-div">
@@ -35,8 +39,33 @@ export function renderGamesGrid() {
     }
   });
   document.querySelector('.js-games-grid').innerHTML = html;
-  
-}
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate')
+    }
+  })
+  }, {});
+  document.querySelectorAll('.game-card2').forEach((element) => {
+    observer.observe(element)
+  });
+  document.querySelectorAll('.game-card').forEach((element) => {
+    observer.observe(element)
+  })
+  let timeOutId;
+  document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId
+      cart.addToCart(productId)
+      button.innerHTML = 'Added!'
+      clearTimeout(timeOutId)
+      timeOutId = setTimeout(() => {
+        button.innerHTML = 'Add to cart'
+      }, 1000)
+      renderHeader()
+    })
+  })
+};
 SetUpMoreButtonFunction()
 function SetUpMoreButtonFunction() {
   const moreButtonElement  = document.querySelector('.more-button')
@@ -57,3 +86,4 @@ function SetUpMoreButtonFunction() {
     moreButtonElement.scrollIntoView({block: 'end'})
   })
 }
+
