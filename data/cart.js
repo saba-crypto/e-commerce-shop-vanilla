@@ -39,6 +39,7 @@ export const cart = {
         }
       })
     }
+    this.saveToStorage()
   }
 }
 export function calculateTotalCartQuantity() {

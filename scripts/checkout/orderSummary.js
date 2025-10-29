@@ -1,6 +1,7 @@
 import { cart } from "../../data/cart.js";
 import { products } from "../../data/products.js";
 import {formatCurrency} from '../utils/money.js'
+import { renderPaymentSummary } from "./paymentSummary.js";
 export function renderOrderSummary() {
   let html = ''
   let matchingProduct;
@@ -45,7 +46,7 @@ export function renderOrderSummary() {
       const productId = button.dataset.productId
       cart.removeFromCart(productId)
       renderOrderSummary()
-      
+      renderPaymentSummary()
     })  
   });
   document.querySelectorAll('.js-update-button').forEach((button) => {
@@ -65,6 +66,7 @@ export function renderOrderSummary() {
       button.classList.remove('show')
       document.querySelector(`.js-quantity-label-id-${productId}`).classList.remove('hide')
       renderOrderSummary()
+      renderPaymentSummary()
     })
   })
 } 
