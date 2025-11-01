@@ -1,7 +1,7 @@
 import { products } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 import {cart} from '../../data/cart.js'
-import { renderHeader } from "./pageHeader.js";
+import { renderHeader } from "./header.js";
 import { renderPopularGamesGrid } from "./popularGames.js";
 let initialLimit = 10
 
@@ -21,7 +21,7 @@ export function renderGamesGrid() {
           </div>
           <div class="game-stats">
             <div class="game-price-teg-div">
-              <p class="game-price-teg">Price: $${product.priceCents}</p>
+              <p class="game-price-teg">Price: $${formatCurrency(product.priceCents)}</p>
             </div>
             <div class="game-info-flex">
               <div class="game-info">
@@ -86,4 +86,7 @@ function SetUpMoreButtonFunction() {
     moreButtonElement.scrollIntoView({block: 'end'})
   })
 }
+document.querySelector('.js-buy-now-button').addEventListener('click' , () => {
+  document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'})
+})
 

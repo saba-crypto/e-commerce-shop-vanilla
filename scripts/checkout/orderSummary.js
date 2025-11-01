@@ -2,6 +2,7 @@ import { cart } from "../../data/cart.js";
 import { products } from "../../data/products.js";
 import {formatCurrency} from '../utils/money.js'
 import { renderPaymentSummary } from "./paymentSummary.js";
+import { renderCheckoutHeader } from "./header.js";
 export function renderOrderSummary() {
   let html = ''
   let matchingProduct;
@@ -47,6 +48,7 @@ export function renderOrderSummary() {
       cart.removeFromCart(productId)
       renderOrderSummary()
       renderPaymentSummary()
+      renderCheckoutHeader()
     })  
   });
   document.querySelectorAll('.js-update-button').forEach((button) => {
@@ -67,6 +69,7 @@ export function renderOrderSummary() {
       document.querySelector(`.js-quantity-label-id-${productId}`).classList.remove('hide')
       renderOrderSummary()
       renderPaymentSummary()
+      renderCheckoutHeader()
     })
   })
 } 

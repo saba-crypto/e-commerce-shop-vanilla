@@ -1,10 +1,10 @@
-import { calculateTotalCartQuantity } from "../../data/cart.js"
+import { cart } from "../../data/cart.js"
 export function renderHeader() {
   let html =
   `
   <div class="left-segment">
     <img class="menu-icon" src="/Images/Icons/menu.png" alt="" />
-    <a class="home" href="#"><p class="home">Home</p></a>
+    <p class="home js-home-link">Home</p>
   </div>
 
   <div class="middle-segment">
@@ -22,14 +22,13 @@ export function renderHeader() {
     <div class="log-in-div">
       <button class="log-in-button">Log In</button>
     </div>
-    <div class="cart-icon-div">
-      <a href="/HTML-CSS/Checkout.html"
-        ><img
+    <div class="cart-icon-div js-cart-icon"> 
+        <img
           class="cart-icon"
           src="/Images/Icons/Shopping-cart-icon.png"
           alt=""
-      /></a>
-      <p class="badge">${calculateTotalCartQuantity()}</p>
+        />
+      <p class="badge">${cart.calculateTotalCartQuantity()}</p>
       <p class="tooltip">Checkout</p>
     </div>
     <div class="profile-picture-div">
@@ -68,4 +67,10 @@ export function renderHeader() {
     </div>
   </div>`
   document.querySelector('.main-header').innerHTML = html
+  document.querySelector('.js-cart-icon').addEventListener('click', () => {
+    window.location.href = 'checkout.html'
+  })
+  document.querySelector('.js-home-link').addEventListener('click', () => {
+    window.location.href = 'index.html'
+  })
 }

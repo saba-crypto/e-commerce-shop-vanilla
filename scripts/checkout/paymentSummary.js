@@ -60,7 +60,7 @@ export function renderPaymentSummary() {
       </div>
     </div>
     <div class="pay-button-div">
-      <button class="pay-button">Pay($${formatCurrency(total)})</button>
+      <button class="pay-button js-pay">Pay($${formatCurrency(total)})</button>
     </div>
   `
   document.querySelector('.js-payment-summary').innerHTML = paymentHtml
@@ -71,6 +71,8 @@ export function renderPaymentSummary() {
       deliveryPrice = Number(deliveryPriceCents)
       renderPaymentSummary()
     });
+  });
+  document.querySelector('.js-pay').addEventListener('click' , () => {
+    window.location.href = 'orders.html'
   })
-  
 }

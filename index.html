@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#3498db" />
     <title>OSgamestore</title>
 
-    <link rel="stylesheet" href="/HTML-CSS/CSS/Header.css" />
-    <link rel="stylesheet" href="/HTML-CSS/CSS/General.css" />
-    <link rel="stylesheet" href="/HTML-CSS/CSS/Game-Cards.css" />
-    <link rel="stylesheet" href="/HTML-CSS/CSS/Introduction.css" />
-    <link rel="stylesheet" href="/HTML-CSS/CSS/subscriptions.css" />
-    <link rel="stylesheet" href="/HTML-CSS/CSS/index-responsive.css" />
+    <link rel="stylesheet" href="/CSS/Header.css" />
+    <link rel="stylesheet" href="/CSS/General.css" />
+    <link rel="stylesheet" href="/CSS/Game-Cards.css" />
+    <link rel="stylesheet" href="/CSS/Introduction.css" />
+    <link rel="stylesheet" href="/CSS/subscriptions.css" />
+    <link rel="stylesheet" href="/CSS/index-responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,13 +51,7 @@
             </h2>
           </div>
           <div class="first-segment-buttons">
-            <button class="buy-button">
-              <a
-                style="text-decoration: none; color: var(--optional-clr)"
-                href="#popular-games"
-                >Buy Now</a
-              >
-            </button>
+            <button class="buy-button js-buy-now-button">Buy Now</button>
             <button class="sign-in-button">Sign Up</button>
           </div>
         </div>
@@ -65,11 +59,9 @@
       <hr class="white-line" />
       <section class="second-segment">
         <div class="title-div">
-          <h2 class="title" id="popular-games">Best Selling Games:</h2>
+          <h2 class="title js-popular-games-title">Best Selling Games:</h2>
         </div>
-        <div
-          class="popular-games-segment popular-games-animation js-popular-games-grid"
-        ></div>
+        <div class="popular-games-segment js-popular-games-grid"></div>
       </section>
       <section class="third-segment">
         <div class="more-games-div">

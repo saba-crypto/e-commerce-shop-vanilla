@@ -40,12 +40,12 @@ export const cart = {
       })
     }
     this.saveToStorage()
-  }
-}
-export function calculateTotalCartQuantity() {
-  let totalCartQuantity = 0;
-  cart.cartItems.forEach((cartItem) => {
-    totalCartQuantity += cartItem.quantity
-  });
-  return totalCartQuantity;
+  },
+  calculateTotalCartQuantity() {
+    let totalCartQuantity = 0;
+    cart.cartItems.forEach((cartItem) => {
+      totalCartQuantity += cartItem.quantity
+    });
+    return totalCartQuantity;
+  } 
 }
