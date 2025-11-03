@@ -3,6 +3,7 @@ import { products } from "../../data/products.js";
 import {formatCurrency} from '../utils/money.js'
 import { renderPaymentSummary } from "./paymentSummary.js";
 import { renderCheckoutHeader } from "./header.js";
+/*
 export function renderOrderSummary() {
   let html = ''
   let matchingProduct;
@@ -73,5 +74,5 @@ export function renderOrderSummary() {
     })
   })
 } 
-
+*/
    

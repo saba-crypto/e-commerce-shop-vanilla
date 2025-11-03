@@ -19,11 +19,209 @@
 
     <main class="main-content">
       <section class="left-side-div">
-        <div class="game-cards js-order-summary"></div>
+        <div class="game-cards js-order-summary">
+          <div class="game-card">
+            <div class="game-image-div">
+              <img
+                class="game-image"
+                draggable="false"
+                src="/Images/Game-card-images/doom.webp"
+                alt=""
+              />
+            </div>
+            <div class="game-info-div">
+              <div class="game-name-div">
+                <h2 class="game-name">product name</h2>
+              </div>
+              <div class="game-price-quantity-div">
+                <p class="price">Price: $43</p>
+                <p class="quantity">
+                  Quantity:
+                  <span
+                    class="quantity-label js-quantity-label-id-${cartItem.productId}"
+                  >
+                    1</span
+                  ><input
+                    class="quantity-input js-quantity-input-id-${cartItem.productId}"
+                    type="number"
+                  /><button
+                    data-product-id="${cartItem.productId}"
+                    class="save-button js-save-button js-save-button-id-${cartItem.productId}"
+                  >
+                    Save
+                  </button>
+                </p>
+              </div>
+              <div class="buttons-div">
+                <button
+                  data-product-id="${cartItem.productId}"
+                  class="remove-button js-delete-button"
+                >
+                  Remove
+                </button>
+                <button
+                  data-product-id="${cartItem.productId}"
+                  class="update-button js-update-button"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+            <div class="delivery-options-div">
+              <p class="delivery-option-title">Select Delivery:</p>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Standard <span class="date-sub">(1 month)</span>
+                </p>
+                <p class="delivery-sub">FREE</p>
+              </div>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Express <span class="date-sub">(7 days)</span>
+                </p>
+                <p class="delivery-sub">$3.99</p>
+              </div>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Super Express <span class="date-sub">(3 days)</span>
+                </p>
+                <p class="delivery-sub">$5.99</p>
+              </div>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-image-div">
+              <img
+                class="game-image"
+                draggable="false"
+                src="/Images/Game-card-images/doom.webp"
+                alt=""
+              />
+            </div>
+            <div class="game-info-div">
+              <div class="game-name-div">
+                <h2 class="game-name">product name</h2>
+              </div>
+              <div class="game-price-quantity-div">
+                <p class="price">Price: $43</p>
+                <p class="quantity">
+                  Quantity:
+                  <span
+                    class="quantity-label js-quantity-label-id-${cartItem.productId}"
+                  >
+                    1</span
+                  ><input
+                    class="quantity-input js-quantity-input-id-${cartItem.productId}"
+                    type="number"
+                  /><button
+                    data-product-id="${cartItem.productId}"
+                    class="save-button js-save-button js-save-button-id-${cartItem.productId}"
+                  >
+                    Save
+                  </button>
+                </p>
+              </div>
+              <div class="buttons-div">
+                <button
+                  data-product-id="${cartItem.productId}"
+                  class="remove-button js-delete-button"
+                >
+                  Remove
+                </button>
+                <button
+                  data-product-id="${cartItem.productId}"
+                  class="update-button js-update-button"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+            <div class="delivery-options-div">
+              <p class="delivery-option-title">Select Delivery:</p>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Standard <span class="date-sub">(1 month)</span>
+                </p>
+                <p class="delivery-sub">FREE</p>
+              </div>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Express <span class="date-sub">(7 days)</span>
+                </p>
+                <p class="delivery-sub">$3.99</p>
+              </div>
+              <div class="delivery-option">
+                <input
+                  data-delivery-price-cents="599"
+                  class="radio-input js-radio-input"
+                  type="radio"
+                  name="delivery"
+                />
+                <p class="delivery-title">
+                  Super Express <span class="date-sub">(3 days)</span>
+                </p>
+                <p class="delivery-sub">$5.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="right-side-div">
         <h1 class="hidden-page-title">Checkout(2 items)</h1>
-        <div class="pay-check js-payment-summary"></div>
+        <div class="pay-check js-payment-summary">
+          <div class="total-cash-div">
+            <div class="price-div cash-div">
+              <p class="price-text">Items(1):</p>
+              <p class="price-text">$9.99</p>
+            </div>
+            <div class="tax-div cash-div">
+              <p class="price-text">shipping:</p>
+              <p class="price-text">$5.99</p>
+            </div>
+            <div class="delivery-price-div cash-div">
+              <p class="price-text">Total before tax:</p>
+              <p class="price-text">$15.98</p>
+            </div>
+            <div class="cash-div">
+              <p class="price-text">Estimated tax(10%):</p>
+              <p class="price-text">$1.60</p>
+            </div>
+          </div>
+          <div>Order total: $17.58</div>
+          <div class="pay-button-div">
+            <button class="pay-button js-pay">Pay($23)</button>
+          </div>
+        </div>
       </section>
     </main>
     <script src="/scripts/checkout.js" type="module"></script>

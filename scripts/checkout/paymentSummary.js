@@ -2,6 +2,7 @@ import { cart } from "../../data/cart.js";
 import { products } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 let deliveryPrice = 0
+/*
 export function renderPaymentSummary() {
   let totalBeforeTax = 0;
   products.forEach((product) => {
@@ -76,3 +77,4 @@ export function renderPaymentSummary() {
     window.location.href = 'orders.html'
   })
 }
+*/
