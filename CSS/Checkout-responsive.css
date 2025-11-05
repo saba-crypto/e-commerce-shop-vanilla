@@ -1,11 +1,14 @@
-@media (max-width: 1200px) {
+@media (max-width: 1085px) {
     .main-content {
         display: flex;
         flex-direction: column-reverse;
         row-gap: 30px;
     }
+
     .right-side-div {
-        position: static;
+        width: 100%;
+        margin: 0;
+        justify-content: flex-end;
     }
     .left-side-div {
         margin: 0;
@@ -26,14 +29,6 @@
         font-size: 0.1px;
         opacity: 0;
     }
-    .hidden-brand-name {
-        font-size: 2rem;
-        opacity: 1;
-        color: white;
-        margin: 0;
-        width: 110px;
-        align-self: flex-start;
-    }
     .page-title {
         color: var(--accent-clr);
     }
@@ -43,6 +38,9 @@
     .track-orders-button {
         padding-left: 16px;
         padding-right: 16px;
+    }
+    .pay-check {
+        margin-right: 25px;
     }
 }
 @media (max-width: 800px) {
@@ -57,6 +55,9 @@
     
     .left-side-div {
         display: block;
+    }
+    .right-side-div {
+        justify-content: center;
     }
     .game-cards {
         flex-direction: row;
@@ -78,12 +79,6 @@
         font-size: 0.01rem;
         opacity: 0;
     }
-    .hidden-page-title {
-        color: var(--optional-clr);
-        opacity: 1;
-        font-size: 2rem;
-        margin-top: 0;
-    }
     .track-orders-button {
         padding: 10px;
     }
@@ -95,28 +90,7 @@
     .header .right-side {
         max-width: 220px;
     }
-    .pay-check {
-        padding: 15px;
-    }
-    .pay-check-title {
-        text-wrap: wrap;
-        font-size: 1.9rem;
-    }
-    .delivery-options {
-        gap: 10px;
-    }
-    .delivery-sub {
-        font-size: 17px;
-    }
-    .total-cash-div {
-        gap: 10px;
-    }
-    .pay-button-div {
-        margin-top: 15px;
-    }
-    .pay-button {
-        width: 100%;
-    }
+    
     .track-orders-button {
         max-width: 350px;
     }
@@ -130,6 +104,10 @@
     .game-image-div {
         display: flex;
         justify-content: center;
+    }
+    .pay-check {
+        margin: 0;
+        width: 90%;
     }
 
     .price,

@@ -13,7 +13,8 @@ export const cart = {
     } else {
       this.cartItems.push({
         productId: productId,
-        quantity: 1
+        quantity: 1,
+        deliveryOptionId: '1'
       })
     }
     this.saveToStorage()
@@ -47,5 +48,13 @@ export const cart = {
       totalCartQuantity += cartItem.quantity
     });
     return totalCartQuantity;
-  } 
+  },
+  changeDeliveryOptionId(productId, deliveryOptionId) {
+    this.cartItems.forEach((cartItem) => {
+      if (cartItem.productId === productId) {
+        cartItem.deliveryOptionId = deliveryOptionId
+      }
+    });
+    this.saveToStorage()
+  }
 }
