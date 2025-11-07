@@ -13,7 +13,9 @@
     border-bottom: solid 2px rgb(137, 137, 137);
     font-family: Roboto;
 }
-
+.hide {
+    display: none;
+}
 /*-------------Right Segment--------------*/
 
 .right-segment {

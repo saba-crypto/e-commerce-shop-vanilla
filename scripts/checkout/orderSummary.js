@@ -107,7 +107,6 @@ export function renderOrderSummary() {
       const deliveryOptionId = input.dataset.deliveryId;
       const productId = input.dataset.productId
       cart.changeDeliveryOptionId(productId, deliveryOptionId);
-      console.log(cart.cartItems)
       renderOrderSummary();
     })
   })

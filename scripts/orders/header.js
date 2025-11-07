@@ -1,3 +1,4 @@
+import {cart} from '../../data/cart.js'
 export function renderOrdersHeader() {
   let html = `
     <div class="left-segment">
@@ -26,7 +27,7 @@ export function renderOrdersHeader() {
           src="/Images/Icons/Shopping-cart-icon.png"
           alt=""
         />
-        <p class="badge">2</p>
+        ${cart.cartItems.length > 0 ? `<p class="badge">${cart.calculateTotalCartQuantity()}</p>` : ""}
         <p class="tooltip">Checkout</p>
       </div>
       <div class="profile-picture-div">

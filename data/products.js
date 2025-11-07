@@ -140,4 +140,3 @@ export let products = [{
     return new Product(product)
   }
 });
-console.log(products)

@@ -15,7 +15,7 @@ export function renderCheckoutHeader() {
   </section>
 
   <section class="right-side">
-    <button class="track-orders-button">Track Orders</button>
+    <button class="track-orders-button js-track-orders">Track Orders</button>
     <button class="log-in-button">Log In</button>
     <div class="profile-photo-div">
       <img
@@ -58,6 +58,9 @@ export function renderCheckoutHeader() {
     </div>
   </section>
  `
+ document.querySelector('.js-track-orders').addEventListener('click', () => {
+    window.location.href = 'orders.html'
+ })
  document.querySelector('.js-home-link').addEventListener('click', () => {
     window.location.href = 'index.html'
   }) 

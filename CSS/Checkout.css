@@ -10,7 +10,10 @@ p, h2 {
     flex-direction: row;
     column-gap: 30px;
 }
-
+.faded {
+    opacity: 0.4;
+    filter: saturate(70%);
+}
 /*----------HEADER----------*/
 .header {
     display: flex;
@@ -535,8 +538,15 @@ p, h2 {
     opacity: 0.8;
     box-shadow: 0px 0px 20px rgba(128, 0, 255, 0.8);
 }
+
 .pay-button:active {
     transition-duration: 0.01s;
     opacity: 1;
+}
+.pay-button.faded:hover {
+    opacity: 0.4;
+}
+.pay-button.faded::after {
+    display: none;
 }
 

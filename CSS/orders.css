@@ -24,6 +24,7 @@ body {
 .orders-list {
   display: flex;
   flex-direction: column;
+  row-gap: 30px;
 }
 .bold {
   font-weight: 700;
@@ -80,6 +81,7 @@ body {
   width: 80%;
   background-color: var(--secondary-clr);
   border: solid var(--accent-clr) 3px;
+  overflow: hidden;
 }
 .progress-div {
   display: flex;
@@ -90,10 +92,11 @@ body {
 }
 .progress-status {
   transition-duration: 0.3s;
-  border-radius: 15px;
-  height: 25px;
+  border-radius: 50px;
+  height: 100%;
   background-color: var(--primary-clr);
   width: 35%;
+  
 }
 .order-info {
   font-weight: 600;

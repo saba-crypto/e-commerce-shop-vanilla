@@ -28,7 +28,7 @@ export function renderHeader() {
           src="/Images/Icons/Shopping-cart-icon.png"
           alt=""
         />
-      <p class="badge">${cart.calculateTotalCartQuantity()}</p>
+      ${cart.cartItems.length > 0 ? `<p class="badge">${cart.calculateTotalCartQuantity()}</p>` : ""}
       <p class="tooltip">Checkout</p>
     </div>
     <div class="profile-picture-div">
