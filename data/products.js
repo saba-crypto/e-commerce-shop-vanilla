@@ -76,13 +76,13 @@ export let products = [{
 },{
   id: 'amfltp1086u1hf',
   image: "/images/Game-card-images/megaman7-nocopyright.png",
-  name: 'Mega Man7',
+  name: 'Mega Man7: Super Nintendo Edition',
   priceCents: 599,
   rating: 4.5,
 },{
   id: '184dncmaske-58',
   image: "/images/Game-card-images/metalgear-nocopyright.jpg",
-  name: 'Metal Gear',
+  name: 'Metal Gear Solid V: the phantom pain',
   priceCents: 749,
   rating: 4,
 },{
@@ -94,7 +94,7 @@ export let products = [{
 },{
   id: '83a837rhd',
   image: "/images/Game-card-images/sonic-nocopyright.png",
-  name: 'Super Mario World',
+  name: 'Sonic The Hedgehog 2 Genesis',
   priceCents: 549,
   rating: 3,
 },{
@@ -140,3 +140,12 @@ export let products = [{
     return new Product(product)
   }
 });
+export function filterProducts(searchValue) {
+  let newProducts = []
+  products.forEach((product) => {
+    if (product.name.toLowerCase().includes(searchValue.toLowerCase())) {
+      newProducts.push(product)
+    }
+  });
+  products = newProducts
+}

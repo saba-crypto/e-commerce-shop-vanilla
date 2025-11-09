@@ -29,5 +29,11 @@ export function renderPopularGamesGrid() {
       `
     }
   });
-  document.querySelector('.js-popular-games-grid').innerHTML = html
+  const popularGamesGrid = document.querySelector('.js-popular-games-grid')
+  const GamesGrid = document.querySelector('.js-games-grid')
+  if (popularGamesGrid) {
+    popularGamesGrid.innerHTML = html
+  } else {
+    GamesGrid.innerHTML += html
+  }
 }

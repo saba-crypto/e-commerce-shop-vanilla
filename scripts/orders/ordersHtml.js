@@ -48,7 +48,7 @@ export function renderOrders() {
       deliveryOptions.forEach((option) => {
         if (option.id === cartItem.deliveryOptionId) {
           arrivalDate = dayjs(order.date).add(option.deliveryDays, 'days')
-          deliveryDate = today + option.deliveryDays
+          deliveryDate = orderDate + option.deliveryDays
         }
       });
       console.log(today)

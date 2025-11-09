@@ -1,10 +1,12 @@
 .popular-games-segment {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
 }
 .more-games-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
 }
 .second-segment,
 .third-segment,
@@ -29,32 +31,18 @@
     font-size: 40px;
     color: var(--optional-clr)
 }
-.game-card {
-    justify-self: center;
-    background-color: var(--optional-clr);
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 78%;
-    min-width: 250px;
-    padding: 10px;
-    transition: opacity 0.6s, scale 0.15s, box-shadow 0.15s, transform 0.4s;
-    box-sizing: border-box;
-    transform: translateY(150px);
-    opacity: 0;
-}
+
 .game-card:hover {
     scale: 102%;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 }
-.game-card2 {
+.game-card {
     align-self: center;
     justify-self: center;
     background-color: var(--optional-clr);
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 90%;
-    scale: 0.89;
+    width: clamp(180px, 85%, 300px);
     padding: 10px;
     transition: opacity 0.6s, scale 0.15s, box-shadow 0.15s, transform 0.4s;
     margin: 0;
@@ -62,15 +50,11 @@
     opacity: 0;
     transform: translateY(150px);
 }
-.game-card2.animate,
 .game-card.animate {
     opacity: 1;
     transform: translateY(0px);
 }
-.game-card2:hover {
-    scale: 0.91;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-}
+
 .game-price-teg-div {
     background-color: var(--primary-clr);
     border-radius: 5px;

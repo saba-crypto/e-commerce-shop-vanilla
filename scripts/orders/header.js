@@ -8,11 +8,13 @@ export function renderOrdersHeader() {
 
     <div class="middle-segment">
       <div class="search-bar-div">
-        <img
-          class="search-icon"
-          src="/Images/Icons/white-search.png"
-          alt=""
-        />
+        <div class="search-button">
+          <img
+            class="search-icon"
+            src="/Images/Icons/white-search.png"
+            alt=""
+          />
+        </div>
         <input class="search-bar" type="text" placeholder="Search" />
       </div>
     </div>

@@ -11,7 +11,7 @@ export function renderGamesGrid() {
   products.forEach((product) => {
     if (product.type !== 'popular' && gamesLimit > 0) {
       html += `
-        <div class="game-card2">
+        <div class="game-card">
           <div class="game-image-div">
             <img
               class="game-image"
@@ -38,7 +38,12 @@ export function renderGamesGrid() {
       gamesLimit--
     }
   });
-  document.querySelector('.js-games-grid').innerHTML = html;
+  const url = new URLSearchParams(window.location.search)
+  if (url.get('search')) {
+    document.querySelector('.js-games-grid').innerHTML += html
+  } else {
+    document.querySelector('.js-games-grid').innerHTML = html;
+  }
   const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -65,11 +70,16 @@ export function renderGamesGrid() {
       renderHeader()
     })
   })
+  if (products.length < 10) {
+  document.querySelector('.more-button').remove();
+}
 };
+
 SetUpMoreButtonFunction()
 function SetUpMoreButtonFunction() {
-  const moreButtonElement  = document.querySelector('.more-button')
+  const moreButtonElement  = document.querySelector('.more-button');
   moreButtonElement.addEventListener('click', () => {
+    
     if (moreButtonElement.innerText === 'More') {
       initialLimit += 10
       if (initialLimit >= products.length) {
@@ -83,10 +93,9 @@ function SetUpMoreButtonFunction() {
       }
     }
     renderGamesGrid()
-    moreButtonElement.scrollIntoView({block: 'end'})
   })
 }
 document.querySelector('.js-buy-now-button').addEventListener('click' , () => {
-  document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'})
+  document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'});
 })
 

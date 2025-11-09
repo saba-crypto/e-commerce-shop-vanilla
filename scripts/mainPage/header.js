@@ -9,12 +9,14 @@ export function renderHeader() {
 
   <div class="middle-segment">
     <div class="search-bar-div">
-      <img
-        class="search-icon"
-        src="/Images/Icons/white-search.png"
-        alt=""
-      />
-      <input class="search-bar" type="text" placeholder="Search" />
+      <div class="search-button js-search-button">
+        <img
+          class="search-icon"
+          src="/Images/Icons/white-search.png"
+          alt=""
+        />
+      </div>
+      <input name="search-bar-input" class="search-bar js-search-bar" type="text" placeholder="Search" />
     </div>
   </div>
 
@@ -72,5 +74,15 @@ export function renderHeader() {
   })
   document.querySelector('.js-home-link').addEventListener('click', () => {
     window.location.href = 'index.html'
+  })
+  document.querySelector('.js-search-button').addEventListener('click', () => {
+    const searchValue = document.querySelector('.js-search-bar').value
+    document.location.href = `index.html?search=${searchValue}`
+  })
+  document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      const searchValue = document.querySelector('.js-search-bar').value
+      document.location.href = `index.html?search=${searchValue}`
+    }
   })
 }
