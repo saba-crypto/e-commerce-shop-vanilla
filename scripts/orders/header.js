@@ -8,14 +8,14 @@ export function renderOrdersHeader() {
 
     <div class="middle-segment">
       <div class="search-bar-div">
-        <div class="search-button">
+        <div class="search-button js-search-button">
           <img
             class="search-icon"
             src="/Images/Icons/white-search.png"
             alt=""
           />
         </div>
-        <input class="search-bar" type="text" placeholder="Search" />
+        <input class="search-bar js-search-bar" type="text" placeholder="Search" />
       </div>
     </div>
 
@@ -68,7 +68,17 @@ export function renderOrdersHeader() {
       </div>
     </div>
   `
-  document.querySelector('.js-orders-header').innerHTML = html
+  document.querySelector('.js-orders-header').innerHTML = html;
+  document.querySelector('.js-search-button').addEventListener('click', () => {
+    const searchValue = document.querySelector('.js-search-bar').value
+    document.location.href = `index.html?search=${searchValue}`
+  });
+  document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      const searchValue = document.querySelector('.js-search-bar').value
+      document.location.href = `index.html?search=${searchValue}`
+    }
+  });
   document.querySelector('.js-home-link').addEventListener('click', () => {
     window.location.href = 'index.html'
   })

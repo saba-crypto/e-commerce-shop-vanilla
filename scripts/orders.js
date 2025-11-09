@@ -1,5 +1,22 @@
 import { renderOrdersHeader } from "./orders/header.js";
 import { renderOrders } from "./orders/ordersHtml.js";
+let url = new URLSearchParams(window.location.search)
+if (url.get('search')) {
+  document.querySelector('.js-second-section').remove()
+  document.querySelector('.js-more-games-title').innerHTML = 'Search Results:'
+  document.querySelector('.more-button').remove()
+  const searchValue = url.get('search')
+  filterProducts(searchValue)
+}
 renderOrdersHeader();
 renderOrders()
 
+
+
+
+
+
+//useless controllers 
+document.querySelector('.log-in-button').addEventListener('click', () => {
+  alert("this button will be fully functional when i learn backend, i keep learning and studying so be tuned :3")
+})

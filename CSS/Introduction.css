@@ -80,7 +80,7 @@
 }
 
 .buy-button,
-.sign-in-button {
+.sign-up-button {
     max-width: 200px;
     width: 100%;
     padding: 18px 0px;
@@ -107,7 +107,7 @@
 .buy-button:active {
     scale: 0.99;
 }
-.sign-in-button {
+.sign-up-button {
     background-color: transparent;
     border: var(--optional-clr) solid 2px;
     color: var(--optional-clr);
@@ -116,7 +116,7 @@
     transition-duration: 0.15s;
     box-sizing: border-box;
 }
-.sign-in-button:hover {
+.sign-up-button:hover {
     color: #242424;
     background-color: white;
     scale: 1.02;
@@ -124,6 +124,6 @@
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.3);
     
 }
-.sign-in-button:active {
+.sign-up-button:active {
     scale: 0.99;
 }
