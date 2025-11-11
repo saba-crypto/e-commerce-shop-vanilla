@@ -26,7 +26,7 @@ export function renderGamesGrid() {
             <div class="game-info-flex">
               <div class="game-info">
                 <button data-product-id="${product.id}" class="add-to-cart-button js-add-to-cart">Add to cart</button>
-                <button class="examine-button">Inspect</button>
+                <button data-product-id="${product.id}" class="examine-button js-inspect">Inspect</button>
               </div>
               <div class="game-name-div">
                 <div class="game-name2">${product.name}</div>
@@ -70,6 +70,10 @@ export function renderGamesGrid() {
       renderHeader()
     })
   })
+  document.querySelectorAll('.js-inspect').forEach((button) => {
+    const productId = button.dataset.productId
+    displayCardInfoHTML(productId)
+  })  
   if (products.length < 10) {
   document.querySelector('.more-button').remove();
 }
@@ -99,3 +103,9 @@ document.querySelector('.js-buy-now-button').addEventListener('click' , () => {
   document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'});
 })
 
+
+function displayCardInfoHTML() {
+  let html = `
+
+  `
+}
