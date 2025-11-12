@@ -58,6 +58,55 @@ export function renderGamesGrid() {
     observer.observe(element)
   })
   let timeOutId;
+   
+  if (products.length < 10) {
+  document.querySelector('.more-button').remove();
+  }
+  function displayCardInfoHTML(productId) {
+    let matchingProduct;
+    products.forEach((product) => {
+      if (product.id === productId) {
+        matchingProduct = product
+      }
+    });
+    let html = `
+      <div class="background-container"></div>
+      <div class="inspect-container">
+        <img class="close-button js-inspect-close" src="/Images/Icons/remove.png" />
+        <img
+          class="image card-image"
+          src="${matchingProduct.image}"
+        />
+        <div class="body">
+          <div class="inspect-game-name-div">
+            <div class="game-name">${matchingProduct.name}</div>
+          </div>
+          <div class="dev-name-div game-info">
+            <img class="icon" src="/Images/Icons/coding.png" alt="" />
+            <div class="dev-name game-sub">Dev(s): ${matchingProduct.gameDev}</div>
+          </div>
+          <div class="rating-div game-info">
+            <img class="icon" src="/Images/Icons/pixel_star.png" alt="" />
+            <div class="rating game-sub">${matchingProduct.rating}</div>
+          </div>
+          <div class="release-date game-info">
+            <img class="icon" src="Images/Icons/calendar.png" alt="" />
+            <div class="release-date game-sub">${matchingProduct.releaseDate}</div>
+          </div>
+          <button class="inspect-add-to-cart js-add-to-cart">Add To Cart</button>
+        </div>
+      </div>
+    `
+    document.body.insertAdjacentHTML('beforeend', html);
+    document.querySelector('.inspect-add-to-cart').addEventListener('click', () => {
+      cart.addToCart(productId)
+      renderHeader()
+    });
+    document.querySelector('.js-inspect-close').addEventListener('click', () => {
+      document.querySelector('.inspect-container').remove();
+      document.querySelector('.background-container').remove();
+    });
+  }
   document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
       const productId = button.dataset.productId
@@ -71,12 +120,11 @@ export function renderGamesGrid() {
     })
   })
   document.querySelectorAll('.js-inspect').forEach((button) => {
-    const productId = button.dataset.productId
-    displayCardInfoHTML(productId)
-  })  
-  if (products.length < 10) {
-  document.querySelector('.more-button').remove();
-}
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId
+      displayCardInfoHTML(productId)
+    })
+  }) 
 };
 
 SetUpMoreButtonFunction()
@@ -101,11 +149,8 @@ function SetUpMoreButtonFunction() {
 }
 document.querySelector('.js-buy-now-button').addEventListener('click' , () => {
   document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'});
+  
 })
 
 
-function displayCardInfoHTML() {
-  let html = `
 
-  `
-}

@@ -19,7 +19,7 @@ export function renderPopularGamesGrid() {
           <div class="game-info-flex">
             <div class="game-info">
               <button data-product-id="${product.id}" class="add-to-cart-button js-add-to-cart">Add to cart</button>
-              <button class="examine-button">Inspect</button>
+              <button data-product-id="${product.id}" class="examine-button js-inspect">Inspect</button>
             </div>
             <div class="game-name-div">
               <div class="game-name">${product.name}</div>
