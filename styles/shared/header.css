@@ -234,3 +234,49 @@
 .search-icon {
     width: 23px;
 }
+
+/*Responsive for header*/
+
+
+@media (max-width: 750px) {
+    .search-bar::placeholder {
+        font-size: 18px;
+    }
+    .main-header .log-in-button {
+        padding: 16px 20px;
+    }
+    .main-header .right-segment {
+        max-width: 200px;
+    }
+    .main-header .middle-segment {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .main-header .menu-icon {
+        margin: 0px 10px;
+    }
+    .main-header .home {
+        font-size: 0.1px;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 520px)  {
+    .main-header .right-segment {
+        justify-content: space-evenly;
+        max-width: 220px;
+        margin: 0;
+
+    }
+    .main-header .log-in-button, .log-in-div, .log-in-button::after, .log-in-button::before {
+        border: 0;
+        opacity: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+}
+
+
+
