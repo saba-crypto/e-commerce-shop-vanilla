@@ -35,10 +35,6 @@
     .header .right-side {
         width: 300px;
     }
-    .track-orders-button {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
     .pay-check {
         margin-right: 25px;
     }
@@ -51,6 +47,7 @@
     }
     .header .right-side {
         justify-content: space-evenly;
+        margin: 0;
     }
     
     .left-side-div {
@@ -79,9 +76,6 @@
         font-size: 0.01rem;
         opacity: 0;
     }
-    .track-orders-button {
-        padding: 10px;
-    }
     .profile-photo {
         width: 50px;
         height: 50px;
@@ -91,9 +85,6 @@
         max-width: 220px;
     }
     
-    .track-orders-button {
-        max-width: 350px;
-    }
     .game-image {
         width: 170px;
     }

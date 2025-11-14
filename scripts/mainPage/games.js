@@ -59,9 +59,6 @@ export function renderGamesGrid() {
   })
   let timeOutId;
    
-  if (products.length < 10) {
-  document.querySelector('.more-button').remove();
-  }
   function displayCardInfoHTML(productId) {
     let matchingProduct;
     products.forEach((product) => {

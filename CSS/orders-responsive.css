@@ -1,0 +1,25 @@
+@media (max-width: 740px) {
+  .orders-list {
+    width: 80%;
+  }
+  .order {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .product-image-div {
+    width: 100%;
+    justify-content: center;
+  }
+  .order-info {
+    width: 95%;
+    row-gap: 5px;
+  }
+  .buy-again-div {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  .buy-again-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

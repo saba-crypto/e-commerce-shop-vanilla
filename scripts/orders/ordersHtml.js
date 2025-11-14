@@ -26,7 +26,7 @@ export function renderOrders() {
             <p>${order.id}</p>
           </div>
         </div>
-        <div class="orders-flex">
+        <div class="orders-grid">
           ${generateOrderHtml(order)}
         </div>
       </div>
@@ -60,7 +60,7 @@ export function renderOrders() {
       }
       ordersHtml += `
         <div class="order">
-          <div class="product-details">
+          <div class="product-image-div">
             <img
               class="product-image"
               src="${matchingProduct.image}"

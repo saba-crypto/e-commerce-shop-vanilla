@@ -2,7 +2,16 @@
   background-color: white;
   padding: 5px;
   border-radius: 10px;
-  width: 180px;
+  width: clamp(100px, 100%, 220px);
+  box-sizing: border-box;
+}
+.product-image-div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 33%;
+  box-sizing: border-box;
+  width: 33.3%;
 }
 
 body {
@@ -13,19 +22,53 @@ body {
 .orders-text {
   font-size: 2rem;
 }
+.orders-list {
+  width: clamp(350px, 80%, 1000px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  height: 93%;
+  column-gap: 15px;
+}
 .order-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.order-info {
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  height: 100%;
+  width: 33.3%;
+}
+.order-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-info p {
+  margin: 20px 0px;
+  font-size: 1.rem;
+  color: black;
+
+  font-weight: 600;
 }
 .main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.orders-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
 }
 .bold {
   font-weight: 700;
@@ -45,11 +88,11 @@ body {
   margin: 10px 0px;
   
 }
-.orders-flex {
+.orders-grid {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: black;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   padding: 0px 15px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -60,6 +103,7 @@ body {
 }
 .arrival-text {
   color: black;
+  text-align: center;
 }
 .product-description {
   width: 100%;
@@ -76,7 +120,6 @@ body {
   justify-content: space-around;
 }
 .progress-bar {
-  margin-bottom: 50px;
   height: 25px;
   border-radius: 15px;
   width: 80%;
@@ -90,6 +133,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 .progress-status {
   transition-duration: 0.3s;
@@ -99,47 +143,12 @@ body {
   width: 35%;
   
 }
-.order-info {
-  font-weight: 600;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.order-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.order-info {
-  background-color: white;
-  border-radius: 8px;
-  height: 250px;
-  width: 40%;
-}
-.order-info p {
-  margin: 20px 0px;
-  font-size: 1.rem;
-  color: black;
 
-  font-weight: 600;
-}
 
-.orders-list {
-  width: clamp(650px, 60%, 80%);
-}
-.order-container {
+.buy-again-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.order {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0px;
-  height: 300px;
+  justify-content: center;
+  width: 33.3%;
 }
 .buy-again-button {
   display: flex;
