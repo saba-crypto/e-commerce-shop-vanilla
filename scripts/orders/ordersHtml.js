@@ -32,7 +32,20 @@ export function renderOrders() {
       </div>
     `
   })
-  function generateOrderHtml(order) {
+  
+    document.querySelector('.js-orders-summary').innerHTML = html;
+
+    //buy again button
+    document.querySelectorAll('.js-buy-again').forEach((button) => {
+      button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        cart.addToCart(productId)
+        renderOrdersHeader()
+      });
+    });
+    
+}
+function generateOrderHtml(order) {
     let matchingProduct;
     let ordersHtml = ''
     let arrivalDate;
@@ -51,9 +64,6 @@ export function renderOrders() {
           deliveryDate = orderDate + option.deliveryDays
         }
       });
-      console.log(today)
-      console.log(orderDate)
-      console.log(deliveryDate)
       let progBarPercentage = ((today - orderDate) / (deliveryDate - orderDate)) * 100;
       if (progBarPercentage < 5) {
         progBarPercentage = 5
@@ -100,16 +110,4 @@ export function renderOrders() {
     })
     return ordersHtml;
     }
-    document.querySelector('.js-orders-summary').innerHTML += html;
-
-    //buy again button
-    document.querySelectorAll('.js-buy-again').forEach((button) => {
-      button.addEventListener('click', () => {
-        const productId = button.dataset.productId;
-        cart.addToCart(productId)
-        renderOrdersHeader()
-      });
-    });
-    
-}
   

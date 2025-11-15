@@ -4,41 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>inspect container</title>
-    <link rel="stylesheet" href="/CSS/inspect.css" />
-    <link rel="stylesheet" href="/CSS/General.css" />
+    <link rel="stylesheet" href="styles/shared/sidebar.css" />
+    <link rel="stylesheet" href="styles/shared/general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
       rel="stylesheet"
     />
+    <style></style>
   </head>
   <body>
-    <div class="background-container"></div>
-    <div class="inspect-container">
-      <img class="close-button" src="/Images/Icons/remove.png" />
-      <img
-        class="image card-image"
-        src="/Images/Game-card-images/mario-world-nocopyright.png"
-      />
-      <div class="body">
-        <div class="game-name-div">
-          <div class="game-name">Mario 64 pocket edition</div>
+    <main class="main">
+      <div class="sidebar-background"></div>
+      <aside class="sidebar">
+        <h2 class="title">Sidebar</h2>
+        <div class="link-div home-link-div">
+          <img src="/Images/Icons/home.png" alt="" />
+          <p class="link home-link">Home</p>
         </div>
-        <div class="dev-name-div game-info">
-          <img class="icon" src="/Images/Icons/coding.png" alt="" />
-          <div class="dev-name game-sub">Developer(s): Nintendo</div>
+        <div class="link-div">
+          <img src="/Images/Icons/checkout.png" alt="" />
+          <p class="link checkout-link">Checkout</p>
         </div>
-        <div class="rating-div game-info">
-          <img class="icon" src="/Images/Icons/pixel_star.png" alt="" />
-          <div class="rating game-sub">Rating: 4.3</div>
+        <div class="link-div">
+          <img src="/Images/Icons/orders.png" alt="" />
+          <p class="link orders-link">Orders History</p>
         </div>
-        <div class="release-date game-info">
-          <img class="icon" src="Images/Icons/calendar.png" alt="" />
-          <div class="release-date game-sub">Release Date: 09.04.2001</div>
+        <div class="link-div">
+          <img src="/Images/Icons/facebook.png" alt="" />
+          <p class="link facebook-link">Facebook</p>
         </div>
-        <button class="inspect-add-to-cart js-add-to-cart">Add To Cart</button>
-      </div>
-    </div>
+        <div class="link-div">
+          <img src="/Images/Icons/youtube.png" alt="" />
+          <p class="link youtube-link">YouTube</p>
+        </div>
+        <div class="link-div">
+          <img src="/Images/Icons/github.png" alt="" />
+          <p class="link github-link">Github</p>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>

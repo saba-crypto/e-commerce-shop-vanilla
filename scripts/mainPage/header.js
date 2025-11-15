@@ -3,7 +3,7 @@ export function renderHeader() {
   let html =
   `
   <div class="left-segment">
-    <img class="menu-icon" src="/Images/Icons/menu.png" alt="" />
+    <img class="menu-icon js-menu-icon" src="/Images/Icons/menu.png" alt="" />
     <p class="home js-home-link">Home</p>
   </div>
 

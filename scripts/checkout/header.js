@@ -3,7 +3,7 @@ export function renderCheckoutHeader() {
  document.querySelector('.js-checkout-header').innerHTML = `
  <section class="left-side">
     <img
-      class="header-image menu-icon"
+      class="header-image menu-icon js-menu-icon"
       src="/Images/Icons/menu.png"
       alt=""
     />

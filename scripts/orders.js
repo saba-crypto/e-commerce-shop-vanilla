@@ -1,5 +1,6 @@
 import { renderOrdersHeader } from "./orders/header.js";
 import { renderOrders } from "./orders/ordersHtml.js";
+import { renderSidebar } from "./sidebar.js";
 let url = new URLSearchParams(window.location.search)
 if (url.get('search')) {
   document.querySelector('.js-second-section').remove()
@@ -9,7 +10,9 @@ if (url.get('search')) {
   filterProducts(searchValue)
 }
 renderOrdersHeader();
-renderOrders()
+renderOrders();
+renderSidebar();
+
 
 
 

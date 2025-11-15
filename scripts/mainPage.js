@@ -2,6 +2,7 @@ import {renderPopularGamesGrid} from './mainPage/popularGames.js';
 import {renderGamesGrid} from './mainPage/games.js';
 import { renderHeader } from './mainPage/header.js';
 import { filterProducts } from '../data/products.js';
+import { renderSidebar } from './sidebar.js';
 let url = new URLSearchParams(window.location.search)
 if (url.get('search')) {
   document.querySelector('.js-second-section').remove()
@@ -11,9 +12,10 @@ if (url.get('search')) {
   filterProducts(searchValue)
   document.querySelector('.js-more-games-title').scrollIntoView({block: 'start'})
 }
-renderHeader()
-renderPopularGamesGrid()
-renderGamesGrid()
+renderHeader();
+renderPopularGamesGrid();
+renderGamesGrid();
+renderSidebar();
 
 
 
