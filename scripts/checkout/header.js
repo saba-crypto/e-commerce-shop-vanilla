@@ -60,8 +60,23 @@ export function renderCheckoutHeader() {
  `
  document.querySelector('.js-track-orders').addEventListener('click', () => {
     window.location.href = 'orders.html'
- })
+ });
  document.querySelector('.js-home-link').addEventListener('click', () => {
     window.location.href = 'index.html'
-  }) 
+  }); 
+  const menuIconElement = document.querySelector('.js-menu-icon')
+  const backgroundElement = document.querySelector('.js-sidebar-bg')
+  const sidebarElement = document.querySelector('.js-sidebar')
+  if (menuIconElement) {
+    menuIconElement.addEventListener('click', () => {
+      sidebarElement.classList.add('reveal')
+      backgroundElement.classList.add('reveal-bg')
+    });
+  }
+  if (backgroundElement) {
+    backgroundElement.addEventListener('click', () => {
+      sidebarElement.classList.remove('reveal')
+      backgroundElement.classList.remove('reveal-bg')
+    })
+  };
 }

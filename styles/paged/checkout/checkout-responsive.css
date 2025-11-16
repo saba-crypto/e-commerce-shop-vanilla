@@ -4,7 +4,6 @@
         flex-direction: column-reverse;
         row-gap: 30px;
     }
-
     .right-side-div {
         width: 100%;
         margin: 0;
@@ -37,6 +36,7 @@
     }
     .pay-check {
         margin-right: 25px;
+        width: 80%;
     }
 }
 @media (max-width: 800px) {

@@ -1,4 +1,4 @@
-import { cart } from "../../data/cart.js"
+import { cart } from "../../data/cart.js";
 export function renderHeader() {
   let html =
   `
@@ -68,7 +68,12 @@ export function renderHeader() {
       </div>
     </div>
   </div>`
-  document.querySelector('.main-header').innerHTML = html
+  if (document.querySelector('.js-header').innerHTML !== html) {
+    document.querySelector('.js-header').innerHTML = html;
+  };
+
+
+  //event listeners
   document.querySelector('.js-cart-icon').addEventListener('click', () => {
     window.location.href = 'checkout.html'
   })
@@ -84,5 +89,22 @@ export function renderHeader() {
       const searchValue = document.querySelector('.js-search-bar').value
       document.location.href = `index.html?search=${searchValue}`
     }
-  })
+  });
+
+  //event listeners for sidebar
+  const menuIconElement = document.querySelector('.js-menu-icon')
+  const backgroundElement = document.querySelector('.js-sidebar-bg')
+  const sidebarElement = document.querySelector('.js-sidebar')
+  if (menuIconElement) {
+    menuIconElement.addEventListener('click', () => {
+      sidebarElement.classList.add('reveal')
+      backgroundElement.classList.add('reveal-bg')
+    });
+  }
+  if (backgroundElement) {
+    backgroundElement.addEventListener('click', () => {
+      sidebarElement.classList.remove('reveal')
+      backgroundElement.classList.remove('reveal-bg')
+    })
+  };
 }

@@ -1,7 +1,7 @@
 export function renderSidebar() {
-  let sidebarHTML = ''
   const sidebarElement = document.querySelector('.sidebar');
-  const backgroundElement = document.querySelector('.sidebar-background');
+  let sidebarHTML = ''
+  
   const links = [
     { link: 'index.html',
       name: 'Home',
@@ -52,22 +52,10 @@ export function renderSidebar() {
     `
     sidebarHTML += html
   });
-  sidebarElement.innerHTML = `
-  <div class="title">Sidebar</div>
-  ${sidebarHTML}`
-  const menuIconElement = document.querySelector('.js-menu-icon');
-  if (menuIconElement) {
-    menuIconElement.addEventListener('click', () => {
-      sidebarElement.classList.add('reveal')
-      backgroundElement.classList.add('reveal-bg')
-    });
-  }
-  if (backgroundElement) {
-    backgroundElement.addEventListener('click', () => {
-      sidebarElement.classList.remove('reveal')
-      backgroundElement.classList.remove('reveal-bg')
-    })
-  };
+  
+  sidebarElement.innerHTML += sidebarHTML
+  
+  
   document.querySelectorAll('.link-div').forEach((link) => {
     link.addEventListener('click', () => {
     const href = link.dataset.href
@@ -79,4 +67,5 @@ export function renderSidebar() {
     }
     })
   });
+  
 }

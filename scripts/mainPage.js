@@ -1,8 +1,8 @@
 import {renderPopularGamesGrid} from './mainPage/popularGames.js';
 import {renderGamesGrid} from './mainPage/games.js';
-import { renderHeader } from './mainPage/header.js';
+import { renderHeader } from './shared/header.js';
 import { filterProducts } from '../data/products.js';
-import { renderSidebar } from './sidebar.js';
+import { renderSidebar } from './shared/sidebar.js';
 let url = new URLSearchParams(window.location.search)
 if (url.get('search')) {
   document.querySelector('.js-second-section').remove()

@@ -34,6 +34,8 @@
 }
 .sidebar .title {
   color: var(--optional-clr);
+  font-size: clamp(1.5rem, 5vw, 1.9rem);
+  font-weight: 600;
 }
 .sidebar .link-div {
   display: flex;

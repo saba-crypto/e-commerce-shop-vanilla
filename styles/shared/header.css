@@ -70,11 +70,12 @@
 }
 .cart-icon-div .badge {
     padding: 4px 8px;
+    justify-self: center;
     position: absolute;
     background-color: rgb(221, 0, 0);
     font-size: 17px;
     border-radius: 50px;
-    top: -20px;
+    top: 0px;
     right: 0px;
     color: var(--optional-clr);
     font-weight: 600;

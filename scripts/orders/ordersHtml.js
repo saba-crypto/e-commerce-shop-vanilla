@@ -3,7 +3,7 @@ import { formatCurrency } from "../utils/money.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js"
 import { products } from "../../data/products.js";
 import { cart } from "../../data/cart.js";
-import { renderOrdersHeader } from "./header.js";
+import { renderHeader } from "../shared/header.js";
 import { deliveryOptions } from "../../data/deliveryOptions.js";
 export function renderOrders() {
   document.title = orders.ordersData.length === 0 ? document.title = 'Orders' : `Orders(${orders.ordersData.length})`
@@ -40,7 +40,7 @@ export function renderOrders() {
       button.addEventListener('click', () => {
         const productId = button.dataset.productId;
         cart.addToCart(productId)
-        renderOrdersHeader()
+        renderHeader();
       });
     });
     
