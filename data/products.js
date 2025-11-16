@@ -175,6 +175,14 @@ export let products = [{
   rating: 4.9,
   releaseDate: 'November 21, 1991',
   gameDev: 'Nintendo'
+}, {
+  id: 'brick',
+  image: "/images/Game-card-images/brick.jpg",
+  name: "it's just a brick",
+  priceCents: 99999999,
+  rating: -67,
+  releaseDate: 'no idea when',
+  gameDev: 'Bob the builder'
 }].map((product) => {
   if (product.rating >= 4.7) {
     return new PopularProduct(product)

@@ -86,7 +86,7 @@
     padding: 18px 0px;
     border-radius: 10px;
     border: none;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }   
 .buy-button {
     position: relative;

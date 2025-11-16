@@ -82,7 +82,9 @@ export function renderHeader() {
   })
   document.querySelector('.js-search-button').addEventListener('click', () => {
     const searchValue = document.querySelector('.js-search-bar').value
-    document.location.href = `index.html?search=${searchValue}`
+    if (searchValue !== '')  {
+      document.location.href = `index.html?search=${searchValue}`
+    };
   })
   document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {

@@ -16,7 +16,9 @@ renderHeader();
 renderPopularGamesGrid();
 renderGamesGrid();
 renderSidebar();
-
+document.querySelector('.js-buy-now-button').addEventListener('click' , () => {
+  document.querySelector('.js-popular-games-title').scrollIntoView({block: 'start'});
+})
 
 
 

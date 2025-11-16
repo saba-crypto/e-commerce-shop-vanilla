@@ -28,9 +28,6 @@
         font-size: 0.1px;
         opacity: 0;
     }
-    .page-title {
-        color: var(--accent-clr);
-    }
     .header .right-side {
         width: 300px;
     }
@@ -72,10 +69,6 @@
         row-gap: 20px;
         width: 100%;
     }
-    .page-title {
-        font-size: 0.01rem;
-        opacity: 0;
-    }
     .profile-photo {
         width: 50px;
         height: 50px;
@@ -113,5 +106,25 @@
     }
     .game-card {
         width: clamp(248px, 90%, 400px);
+    }
+    .track-orders-button {
+        display: none;
+    }
+    .home-button {
+        display: none;
+    }
+    .header .right-side {
+        width: 20%;
+    }
+    .header .middle-side {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+    .header .left-side {
+        width: 20%;
+    }
+    .page-title {
+        font-size: clamp(1.5rem, 5vw, 2.0rem);
     }
 }
