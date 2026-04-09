@@ -1,9 +1,8 @@
 import { cart } from "../../data/cart.js";
 export function renderHeader() {
-  let html =
-  `
+  let html = `
   <div class="left-segment">
-    <img class="menu-icon js-menu-icon" src="/Images/Icons/menu.png" alt="" />
+    <img class="menu-icon js-menu-icon" src="./Images/Icons/menu.png" alt="" />
     <p class="home js-home-link">Home</p>
   </div>
 
@@ -12,7 +11,7 @@ export function renderHeader() {
       <div class="search-button js-search-button">
         <img
           class="search-icon"
-          src="/Images/Icons/white-search.png"
+          src="./Images/Icons/white-search.png"
           alt=""
         />
       </div>
@@ -27,33 +26,37 @@ export function renderHeader() {
     <div class="cart-icon-div js-cart-icon"> 
         <img
           class="cart-icon"
-          src="/Images/Icons/Shopping-cart-icon.png"
+          src="./Images/Icons/Shopping-cart-icon.png"
           alt=""
         />
-      ${cart.cartItems.length > 0 ? `<p class="badge">${cart.calculateTotalCartQuantity()}</p>` : ""}
+      ${
+        cart.cartItems.length > 0
+          ? `<p class="badge">${cart.calculateTotalCartQuantity()}</p>`
+          : ""
+      }
       <p class="tooltip">Checkout</p>
     </div>
     <div class="profile-picture-div">
-      <img class="profile-picture" src="/images/IMG_2176.jpg" alt="" />
+      <img class="profile-picture" src="./images/IMG_2176.jpg" alt="" />
       <div class="tooltip">
         <p class="first-name">
           <img
             class="identity-icon"
-            src="/Images/Icons/user.png"
+            src="./Images/Icons/user.png"
             alt=""
           />First name: Saba
         </p>
         <p class="last-name">
           <img
             class="identity-icon"
-            src="/Images/Icons/user.png"
+            src="./Images/Icons/user.png"
             alt=""
           />Last name: Gochishvili
         </p>
         <p class="number">
           <img
             class="identity-icon"
-            src="/Images/Icons/telephone.png"
+            src="./Images/Icons/telephone.png"
             alt=""
           />
           Phone number: 2910291-1921
@@ -61,52 +64,53 @@ export function renderHeader() {
         <p class="address">
           <img
             class="identity-icon"
-            src="/Images/Icons/pin.png"
+            src="./Images/Icons/pin.png"
             alt=""
           />Address: white house
         </p>
       </div>
     </div>
-  </div>`
-  if (document.querySelector('.js-header').innerHTML !== html) {
-    document.querySelector('.js-header').innerHTML = html;
-  };
-
+  </div>`;
+  if (document.querySelector(".js-header").innerHTML !== html) {
+    document.querySelector(".js-header").innerHTML = html;
+  }
 
   //event listeners
-  document.querySelector('.js-cart-icon').addEventListener('click', () => {
-    window.location.href = 'checkout.html'
-  })
-  document.querySelector('.js-home-link').addEventListener('click', () => {
-    window.location.href = 'index.html'
-  })
-  document.querySelector('.js-search-button').addEventListener('click', () => {
-    const searchValue = document.querySelector('.js-search-bar').value
-    if (searchValue !== '')  {
-      document.location.href = `index.html?search=${searchValue}`
-    };
-  })
-  document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      const searchValue = document.querySelector('.js-search-bar').value
-      document.location.href = `index.html?search=${searchValue}`
+  document.querySelector(".js-cart-icon").addEventListener("click", () => {
+    window.location.href = "checkout.html";
+  });
+  document.querySelector(".js-home-link").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.querySelector(".js-search-button").addEventListener("click", () => {
+    const searchValue = document.querySelector(".js-search-bar").value;
+    if (searchValue !== "") {
+      document.location.href = `index.html?search=${searchValue}`;
     }
   });
+  document
+    .querySelector(".js-search-bar")
+    .addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        const searchValue = document.querySelector(".js-search-bar").value;
+        document.location.href = `index.html?search=${searchValue}`;
+      }
+    });
 
   //event listeners for sidebar
-  const menuIconElement = document.querySelector('.js-menu-icon')
-  const backgroundElement = document.querySelector('.js-sidebar-bg')
-  const sidebarElement = document.querySelector('.js-sidebar')
+  const menuIconElement = document.querySelector(".js-menu-icon");
+  const backgroundElement = document.querySelector(".js-sidebar-bg");
+  const sidebarElement = document.querySelector(".js-sidebar");
   if (menuIconElement) {
-    menuIconElement.addEventListener('click', () => {
-      sidebarElement.classList.add('reveal')
-      backgroundElement.classList.add('reveal-bg')
+    menuIconElement.addEventListener("click", () => {
+      sidebarElement.classList.add("reveal");
+      backgroundElement.classList.add("reveal-bg");
     });
   }
   if (backgroundElement) {
-    backgroundElement.addEventListener('click', () => {
-      sidebarElement.classList.remove('reveal')
-      backgroundElement.classList.remove('reveal-bg')
-    })
-  };
+    backgroundElement.addEventListener("click", () => {
+      sidebarElement.classList.remove("reveal");
+      backgroundElement.classList.remove("reveal-bg");
+    });
+  }
 }

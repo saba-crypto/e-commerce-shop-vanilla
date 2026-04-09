@@ -1,130 +1,130 @@
 @media (max-width: 1085px) {
-    .main-content {
-        display: flex;
-        flex-direction: column-reverse;
-        row-gap: 30px;
-    }
-    .right-side-div {
-        width: 100%;
-        margin: 0;
-        justify-content: flex-end;
-    }
-    .left-side-div {
-        margin: 0;
-        width: 100%;
-    }
-    .game-cards {
-        width: 100%;
-        align-items: center;
-    }
-    .game-card {
-        width: 95%;
-    }
-    .brand-div {
-        width: 0.1px;
-        height: 0.1px;
-    }
-    .brand {
-        font-size: 0.1px;
-        opacity: 0;
-    }
-    .header .right-side {
-        width: 300px;
-    }
-    .pay-check {
-        margin-right: 25px;
-        width: 80%;
-    }
+  .main-content {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+  .right-side-div {
+    width: 100%;
+    margin: 0;
+    justify-content: flex-end;
+  }
+  .left-side-div {
+    margin: 0;
+    width: 100%;
+  }
+  .game-cards {
+    width: 100%;
+    align-items: center;
+  }
+  .game-card {
+    width: 95%;
+  }
+  .brand-div {
+    width: 0.1px;
+    height: 0.1px;
+  }
+  .brand {
+    font-size: 0.1px;
+    opacity: 0;
+  }
+  .header .right-side {
+    width: 300px;
+  }
+  .pay-check {
+    margin-right: 25px;
+    width: 80%;
+  }
 }
 @media (max-width: 800px) {
-    .log-in-button,
-    .log-in-button::after,
-    .log-in-button::before {
-        display: none;
-    }
-    .header .right-side {
-        justify-content: space-evenly;
-        margin: 0;
-    }
-    
-    .left-side-div {
-        display: block;
-    }
-    .right-side-div {
-        justify-content: center;
-    }
-    .game-cards {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .game-card {
-        width: clamp(248px, 45%, 400px);
-        justify-self: center;
-        align-self: center;
-    }
-    .game-info-div {
-        width: 100%;
-    }
-    .delivery-options-div {
-        row-gap: 20px;
-        width: 100%;
-    }
-    .profile-photo {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .header .right-side {
-        max-width: 220px;
-    }
-    
-    .game-image {
-        width: 170px;
-    }
-    .game-card {
-        flex-direction: column;
-        row-gap: 20px;
-    }
-    .game-image-div {
-        display: flex;
-        justify-content: center;
-    }
-    .pay-check {
-        margin: 0;
-        width: 90%;
-    }
+  .log-in-button,
+  .log-in-button::after,
+  .log-in-button::before {
+    display: none;
+  }
+  .header .right-side {
+    justify-content: space-evenly;
+    margin: 0;
+  }
 
-    .price,
-    .quantity {
-        font-size: 1.6rem;
-        margin-left: 5px;
-    }
+  .left-side-div {
+    display: block;
+  }
+  .right-side-div {
+    justify-content: center;
+  }
+  .game-cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .game-card {
+    width: clamp(248px, 45%, 400px);
+    justify-self: center;
+    align-self: center;
+  }
+  .game-info-div {
+    width: 100%;
+  }
+  .delivery-options-div {
+    row-gap: 20px;
+    width: 100%;
+  }
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header .right-side {
+    max-width: 220px;
+  }
+
+  .game-image {
+    width: 170px;
+  }
+  .game-card {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .game-image-div {
+    display: flex;
+    justify-content: center;
+  }
+  .pay-check {
+    margin: 0;
+    width: 90%;
+  }
+
+  .order-price,
+  .order-quantity {
+    font-size: 1.6rem;
+    margin-left: 5px;
+  }
 }
 @media (max-width: 700px) {
-    .game-cards {
-        flex-direction: column;
-    }
-    .game-card {
-        width: clamp(248px, 90%, 400px);
-    }
-    .track-orders-button {
-        display: none;
-    }
-    .home-button {
-        display: none;
-    }
-    .header .right-side {
-        width: 20%;
-    }
-    .header .middle-side {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-    }
-    .header .left-side {
-        width: 20%;
-    }
-    .page-title {
-        font-size: clamp(1.5rem, 5vw, 2.0rem);
-    }
+  .game-cards {
+    flex-direction: column;
+  }
+  .game-card {
+    width: clamp(248px, 90%, 400px);
+  }
+  .track-orders-button {
+    display: none;
+  }
+  .home-button {
+    display: none;
+  }
+  .header .right-side {
+    width: 20%;
+  }
+  .header .middle-side {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+  .header .left-side {
+    width: 20%;
+  }
+  .page-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
 }

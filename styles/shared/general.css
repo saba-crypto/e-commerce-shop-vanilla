@@ -7,7 +7,7 @@
     --gradient-clr: linear-gradient(to right, rgb(128, 0, 255), var(--accent-clr))
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--background-clr);
@@ -23,7 +23,6 @@ p, h1, h2, h3, h4, h5 {
 }
 
 .main-content {
-    
     position: relative;
 }
 .end-of-site {

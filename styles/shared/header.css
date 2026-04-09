@@ -236,9 +236,6 @@
     width: 23px;
 }
 
-/*Responsive for header*/
-
-
 @media (max-width: 750px) {
     .search-bar::placeholder {
         font-size: 18px;

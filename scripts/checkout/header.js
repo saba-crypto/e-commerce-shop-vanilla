@@ -1,10 +1,10 @@
-import { cart } from "../../data/cart.js"
+import { cart } from "../../data/cart.js";
 export function renderCheckoutHeader() {
- document.querySelector('.js-checkout-header').innerHTML = `
+  document.querySelector(".js-checkout-header").innerHTML = `
  <section class="left-side">
     <img
       class="header-image menu-icon js-menu-icon"
-      src="/Images/Icons/menu.png"
+      src="./Images/Icons/menu.png"
       alt=""
     />
     <p class="home-button js-home-link">Home</p>
@@ -20,28 +20,28 @@ export function renderCheckoutHeader() {
     <div class="profile-photo-div">
       <img
         class="header-image profile-photo"
-        src="/Images/IMG_2176.jpg"
+        src="./Images/IMG_2176.jpg"
         alt=""
       />
       <div class="tooltip">
         <p class="first-name">
           <img
             class="identity-icon"
-            src="/Images/Icons/user.png"
+            src="./Images/Icons/user.png"
             alt=""
           />First name: Saba
         </p>
         <p class="last-name">
           <img
             class="identity-icon"
-            src="/Images/Icons/user.png"
+            src="./Images/Icons/user.png"
             alt=""
           />Last name: Gochishvili
         </p>
         <p class="number">
           <img
             class="identity-icon"
-            src="/Images/Icons/telephone.png"
+            src="./Images/Icons/telephone.png"
             alt=""
           />
           Phone number: 2910291-1921
@@ -49,7 +49,7 @@ export function renderCheckoutHeader() {
         <p class="address">
           <img
             class="identity-icon"
-            src="/Images/Icons/pin.png"
+            src="./Images/Icons/pin.png"
             alt=""
           />Address: white house
         </p>
@@ -57,26 +57,26 @@ export function renderCheckoutHeader() {
     </div>
     </div>
   </section>
- `
- document.querySelector('.js-track-orders').addEventListener('click', () => {
-    window.location.href = 'orders.html'
- });
- document.querySelector('.js-home-link').addEventListener('click', () => {
-    window.location.href = 'index.html'
-  }); 
-  const menuIconElement = document.querySelector('.js-menu-icon')
-  const backgroundElement = document.querySelector('.js-sidebar-bg')
-  const sidebarElement = document.querySelector('.js-sidebar')
+ `;
+  document.querySelector(".js-track-orders").addEventListener("click", () => {
+    window.location.href = "orders.html";
+  });
+  document.querySelector(".js-home-link").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  const menuIconElement = document.querySelector(".js-menu-icon");
+  const backgroundElement = document.querySelector(".js-sidebar-bg");
+  const sidebarElement = document.querySelector(".js-sidebar");
   if (menuIconElement) {
-    menuIconElement.addEventListener('click', () => {
-      sidebarElement.classList.add('reveal')
-      backgroundElement.classList.add('reveal-bg')
+    menuIconElement.addEventListener("click", () => {
+      sidebarElement.classList.add("reveal");
+      backgroundElement.classList.add("reveal-bg");
     });
   }
   if (backgroundElement) {
-    backgroundElement.addEventListener('click', () => {
-      sidebarElement.classList.remove('reveal')
-      backgroundElement.classList.remove('reveal-bg')
-    })
-  };
+    backgroundElement.addEventListener("click", () => {
+      sidebarElement.classList.remove("reveal");
+      backgroundElement.classList.remove("reveal-bg");
+    });
+  }
 }
